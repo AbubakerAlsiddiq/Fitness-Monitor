@@ -4,30 +4,65 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
 }
 
-h1, h2 {
-    text-align: center;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .top-container {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.top-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.top-container p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .input-container {
+    margin: 0 auto; 
+    width: 40%; 
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-form input[type="text"],
+.input-form input[type="date"],
+.input-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .btn {
+    margin: auto;
+    width: 100%;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -41,50 +76,36 @@ h1, h2 {
     background-color: #0056b3;
 }
 
-.input-form {
-    margin-top: 20px;
-}
-
-.input-form-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical; /* Allow textarea to be vertically resizable */
-}
-
-.close-icon {
-    width: 24px;
-    height: 24px;
-    fill: #f44336;
-}
-
 .close-input-form-btn {
+    margin: 0 auto;
+    width: 100%;
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+}
+
+.close-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.hidden {
+    display: none;
 }
 
 .calendar {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
     margin-bottom: 20px;
 }
 
@@ -93,40 +114,65 @@ h1, h2 {
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
 }
 
 .calendar-body {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(7, 10fr);
+    gap: 20px;
 }
 
-.calendar-day {
+.calendar-date {
     text-align: center;
-    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+}
+
+.calendar-date:hover {
+    background-color: #f0f0f0;
+}
+
+.event {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.add-or-delete-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 .progress-bar-container {
     background-color: #fff;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
-
+  
 .progress-bar {
     height: 20px;
     background-color: #007bff;
     border-radius: 5px;
-    width: 0; /* Initial width */
+    width: 0%; 
     transition: width 0.5s ease-in-out;
 }
 
 .progress-text {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
